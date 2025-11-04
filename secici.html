@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Destinasyon Seçici – VisaTaly</title>
+    <meta
+      name="description"
+      content="VisaTaly destinasyon seçicisi ile bölge, ülke ve vize türüne göre gereksinimleri keşfedin."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="logo"><a href="index.html">https://visataly.com</a></div>
+        <nav class="main-nav" aria-label="Ana menü">
+          <a href="index.html">Anasayfa</a>
+          <a href="akislar.html">Akışlar</a>
+          <a href="sayfalar.html">Sayfalar</a>
+          <a href="veri-modeli.html">Veri Modeli</a>
+          <a href="otomasyonlar.html">Otomasyonlar</a>
+          <a href="fiyatlandirma.html">Fiyatlandırma</a>
+          <a href="zaman-cizelgesi.html">Zaman Çizelgesi</a>
+          <a href="iletisim.html">İletişim</a>
+        </nav>
+        <div class="header-actions">
+          <button class="btn btn-secondary">PDF İndir</button>
+          <button class="btn">Keşif Görüşmesi Planla</button>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Gezinmeyi aç</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobil menü"></nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <header class="section-header">
+            <span class="pill">Destinasyon keşfi</span>
+            <h1>Bölge → Ülke → Vize türü seçerek gereksinimleri görün</h1>
+            <p>
+              Aşağıdaki seçici, VisaTaly’nin Airtable tabanlı destinasyon verilerinden örnekler
+              sunar. Seçiminize göre kontrol listesi ve paket önerileri gösterilir.
+            </p>
+          </header>
+          <form class="hero-form" aria-label="Vize gereksinimlerini keşfet">
+            <label class="sr-only" for="region">Bölge seçin</label>
+            <select id="region" name="region">
+              <option value="Schengen" selected>Schengen</option>
+              <option value="ABD">ABD</option>
+              <option value="Birleşik Krallık">Birleşik Krallık</option>
+              <option value="Kanada">Kanada</option>
+              <option value="Asya">Asya</option>
+            </select>
+            <label class="sr-only" for="country">Ülke seçin</label>
+            <select id="country" name="country"></select>
+            <label class="sr-only" for="visaType">Vize türü seçin</label>
+            <select id="visaType" name="visaType"></select>
+            <button type="submit" class="btn">Gereksinimleri Göster</button>
+          </form>
+          <div class="detail-card" id="requirementPreview" aria-live="polite">
+            <h2>Seçiminize göre öne çıkanlar</h2>
+            <ul id="requirementList">
+              <li>Belgeler ve SSS burada gösterilecek.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Alt bilgi">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo">https://visataly.com</div>
+          <p>Destinasyon verileri Airtable tablosundan yönetilir.</p>
+        </div>
+        <div>
+          <h4>Hızlı linkler</h4>
+          <ul>
+            <li><a href="sayfalar.html">Softr sayfaları</a></li>
+            <li><a href="veri-modeli.html">Veri modeli</a></li>
+            <li><a href="fiyatlandirma.html">Paketler</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>İletişim</h4>
+          <ul>
+            <li><a href="mailto:hello@visataly.com">hello@visataly.com</a></li>
+            <li><a href="tel:+902122222222">+90 212 222 22 22</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-meta">© 2024 https://visataly.com.</div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
