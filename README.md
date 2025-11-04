@@ -6,8 +6,14 @@ açıklar.
 
 ## Önizleme
 
-`index.html` dosyasını bir tarayıcıda açarak ana sayfayı inceleyebilirsiniz. Üst menüden aşağıdaki sayfalar arasında
-geçiş yapılır:
+Projeyi yerelinizde hızlıca görüntülemek için aşağıdaki komut ile hafif bir önizleme sunucusu başlatabilirsiniz:
+
+```bash
+python3 preview.py
+```
+
+Komut tarayıcınızda `http://localhost:8000` adresini açar. Dilerseniz klasik yöntemle `index.html` dosyasını doğrudan
+tarayıcıda açarak da ana sayfayı inceleyebilirsiniz. Üst menüden aşağıdaki sayfalar arasında geçiş yapılır:
 
 - `akislar.html` – Kamu ve admin akışları, durum yaşam döngüsü
 - `sayfalar.html` – Softr sayfaları ve rol bazlı yetkilendirme
