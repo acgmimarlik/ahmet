@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Globetrot Visa Platform Proposal</title>
+    <title>VisaTaly - No-Code Vize Platformu Teklifi</title>
     <meta
       name="description"
-      content="Proposal and implementation plan for a no-code visa platform covering public flows, admin operations, Airtable data model, automations, pricing, and delivery timeline."
+      content="VisaTaly, Softr ve Airtable ile bölge → ülke → vize türü seçicisi, çok adımlı başvuru, müşteri ve yönetici panelleri içeren no-code vize otomasyonunu sunar."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,723 +19,190 @@
   <body>
     <header class="site-header">
       <div class="container">
-        <div class="logo">Globetrot</div>
-        <nav class="main-nav" aria-label="Primary">
-          <a href="#overview">Overview</a>
-          <a href="#flows">Flows</a>
-          <a href="#data">Data Model</a>
-          <a href="#automations">Automations</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#timeline">Timeline</a>
-          <a href="#contact">Contact</a>
+        <div class="logo"><a href="index.html">https://visataly.com</a></div>
+        <nav class="main-nav" aria-label="Ana menü">
+          <a href="index.html" aria-current="page">Anasayfa</a>
+          <a href="akislar.html">Akışlar</a>
+          <a href="sayfalar.html">Sayfalar</a>
+          <a href="veri-modeli.html">Veri Modeli</a>
+          <a href="otomasyonlar.html">Otomasyonlar</a>
+          <a href="fiyatlandirma.html">Fiyatlandırma</a>
+          <a href="zaman-cizelgesi.html">Zaman Çizelgesi</a>
+          <a href="iletisim.html">İletişim</a>
         </nav>
         <div class="header-actions">
-          <button class="btn btn-secondary">Download PDF</button>
-          <button class="btn">Book discovery call</button>
+          <button class="btn btn-secondary">PDF İndir</button>
+          <button class="btn">Keşif Görüşmesi Planla</button>
         </div>
         <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
-          <span class="sr-only">Toggle navigation</span>
+          <span class="sr-only">Gezinmeyi aç</span>
           <span></span>
           <span></span>
           <span></span>
         </button>
       </div>
-      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile"></nav>
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobil menü"></nav>
     </header>
 
     <main>
-      <section class="hero" id="overview">
+      <section class="hero">
         <div class="container">
           <div class="hero-copy">
-            <span class="pill">Product proposal</span>
+            <span class="pill">Ürün teklifi</span>
             <h1>
-              A no-code visa platform where travellers glide from destination choice to
-              approval while operations run the entire backend.
+              VisaTaly ile adayların destinasyon seçip belgelerini yüklediği, operasyon
+              ekibinin ise tek panelden süreci yönettiği no-code vize deneyimi.
             </h1>
             <p>
-              Globetrot delivers a fully configured Softr + Airtable stack covering region →
-              country → visa type selection, a guided multi-step application wizard, secured
-              document vault, client and admin portals, and payment handoffs through
-              Shopier/Iyzico or Stripe test environments.
+              Softr + Airtable mimarimiz bölge → ülke → vize türü seçicisi, 5–7 adımlı
+              başvuru sihirbazı, güvenli belge kasası, müşteri ve koç portalları ile
+              Shopier/Iyzico veya Stripe test ödemelerini kapsar.
             </p>
-            <form class="hero-form" aria-label="Explore supported visas">
-              <label class="sr-only" for="region">Choose a region</label>
-              <select id="region" name="region">
-                <option value="Schengen" selected>Schengen</option>
-                <option value="USA">USA</option>
-                <option value="UK">UK</option>
-                <option value="Canada">Canada</option>
-                <option value="Asia">Asia</option>
-              </select>
-              <label class="sr-only" for="country">Choose a country</label>
-              <select id="country" name="country"></select>
-              <label class="sr-only" for="visaType">Choose a visa type</label>
-              <select id="visaType" name="visaType"></select>
-              <button type="submit" class="btn">Preview requirements</button>
-            </form>
-            <div class="trust-badges" aria-label="Highlights">
+            <div class="trust-badges" aria-label="Öne çıkanlar">
               <div class="badge-item">
                 <span class="badge-value">5–7</span>
-                <span class="badge-label">guided steps</span>
+                <span class="badge-label">yönlendirmeli adım</span>
               </div>
               <div class="badge-item">
-                <span class="badge-value">₺2.5k–₺7.5k</span>
-                <span class="badge-label">package tiers</span>
+                <span class="badge-value">₺2.500–₺7.500</span>
+                <span class="badge-label">paket aralığı</span>
               </div>
               <div class="badge-item">
                 <span class="badge-value">3</span>
-                <span class="badge-label">role experiences</span>
+                <span class="badge-label">rol deneyimi</span>
               </div>
             </div>
+            <div class="cta-group">
+              <a class="btn" href="secici.html">Destinasyon Seçicisini Gör</a>
+              <a class="btn btn-link" href="fiyatlandirma.html">Paketleri incele</a>
+            </div>
           </div>
-          <div class="hero-card" aria-labelledby="card-title">
+          <div class="hero-card" aria-labelledby="kart-baslik">
             <div class="card-head">
-              <div class="card-badge">Live client portal</div>
-              <div class="card-title" id="card-title">Lifecycle preview</div>
+              <div class="card-badge">Canlı müşteri portalı</div>
+              <div class="card-title" id="kart-baslik">Yaşam döngüsü ön izlemesi</div>
             </div>
             <ul class="card-list">
               <li>
                 <span class="icon success" aria-hidden="true">✓</span>
-                Submitted → Under Review notification sent
+                Başvuru gönderildi → İnceleme aşaması e-postası
               </li>
               <li>
                 <span class="icon success" aria-hidden="true">✓</span>
-                Needs Docs stage with checklist &amp; upload prompt
+                Eksik Belgeler durumu ve yükleme çağrısı
               </li>
               <li>
                 <span class="icon pending" aria-hidden="true">•</span>
-                Ready for Appointment email &amp; calendar link
+                Randevuya Hazır bildirimi ve takvim bağlantısı
               </li>
               <li>
                 <span class="icon pending" aria-hidden="true">•</span>
-                Filed status captured with reference number
+                Dosyalandı durumunda referans numarası kaydı
               </li>
             </ul>
             <div class="card-footer">
-              <button class="btn btn-secondary">View sample Airtable base</button>
+              <a class="btn btn-secondary" href="veri-modeli.html">Airtable şemasını incele</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="metrics" aria-label="MVP scope highlights">
+      <section class="metrics" aria-label="MVP kapsamı">
         <div class="container">
           <div class="metric">
             <div class="metric-value">20+</div>
-            <div class="metric-label">countries configured</div>
+            <div class="metric-label">hazır ülke</div>
           </div>
           <div class="metric">
             <div class="metric-value">16</div>
-            <div class="metric-label">automation triggers</div>
+            <div class="metric-label">otomasyon tetikleyicisi</div>
           </div>
           <div class="metric">
             <div class="metric-value">9</div>
-            <div class="metric-label">Softr pages</div>
+            <div class="metric-label">Softr sayfası</div>
           </div>
           <div class="metric">
             <div class="metric-value">4</div>
-            <div class="metric-label">payment flows</div>
+            <div class="metric-label">ödeme akışı</div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="flows" aria-label="User flows">
+      <section class="section">
         <div class="container">
           <header class="section-header">
-            <span class="pill">Guided experiences</span>
-            <h2>Public and admin journeys mapped end-to-end</h2>
+            <span class="pill">Genel bakış</span>
+            <h2>Vize süreçlerini haftalar yerine günlerde yayına alın</h2>
             <p>
-              Each flow is optimized for clarity, ensuring travellers complete applications
-              in minutes while operations keep every case moving.
+              VisaTaly ekibi, belgelerinizi, metinlerinizi ve marka yönergelerinizi kullanarak
+              uçtan uca vize platformunu 3 haftalık sprint ile hazırlar. Pazarlama sayfaları,
+              başvuru formu, müşteri portalı, yönetici paneli ve otomasyonlar tek pakette.
             </p>
           </header>
           <div class="content-grid two-column">
             <article class="detail-card">
-              <h3>1.1 Public flow</h3>
-              <ol>
-                <li>Region → Country → Visa type selector surfaces localized requirements.</li>
-                <li>
-                  Requirements view highlights document checklist, FAQs, and package
-                  comparison (₺2,500 / ₺5,000 / ₺7,500).
-                </li>
-                <li>
-                  Account creation via email magic link or password unlocks the guided wizard
-                  (5–7 steps).
-                </li>
-                <li>
-                  Wizard collects profile, tailored eligibility questions, conditional document
-                  uploads, KVKK/GDPR consent, and final review.
-                </li>
-                <li>
-                  Payment handoff to Shopier/Iyzico (or Stripe test) returns users to a thank-you
-                  page and activates the client portal.
-                </li>
-                <li>
-                  Client portal exposes live status updates, notes/messages, and secure file
-                  downloads.
-                </li>
-              </ol>
+              <h3>Dönüşüm odaklı arayüz</h3>
+              <p>
+                Bölge bazlı keşif deneyimi, yerelleştirilmiş içerik, güven rozetleri ve canlı
+                fiyat tablosu ile adaylar başvuruyu tamamlamadan çıkmıyor.
+              </p>
             </article>
             <article class="detail-card">
-              <h3>1.2 Admin/Coach flow</h3>
-              <ol>
-                <li>New submission auto-creates an Airtable record with all form data.</li>
-                <li>
-                  Admin reviews eligibility, updates status, and records missing documents or
-                  internal notes.
-                </li>
-                <li>Status transitions trigger the appropriate branded email to clients.</li>
-                <li>
-                  Appointment details, payment confirmations, and submission references live on
-                  the same record.
-                </li>
-                <li>
-                  Completion marks archive the case while keeping artifacts accessible for
-                  reporting.
-                </li>
-              </ol>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" aria-label="Pages and experiences">
-        <div class="container">
-          <header class="section-header">
-            <span class="pill">Softr experiences</span>
-            <h2>Marketing, application, and portal pages included</h2>
-            <p>
-              Structured to meet conversion, compliance, and operational needs from the first
-              visit to final approval.
-            </p>
-          </header>
-          <div class="feature-grid">
-            <article class="feature-card">
-              <h3>Home &amp; selector</h3>
+              <h3>Operasyonlar için tek kaynak</h3>
               <p>
-                Region → Country → Visa type filtering with requirements preview, trust
-                signals, pricing highlights, and WhatsApp/contact CTAs.
+                Airtable tabanlı başvuru kayıtları, durum güncellemeleri, randevu alanları ve
+                otomatik e-posta şablonlarıyla tüm ekip aynı sayfada.
               </p>
-            </article>
-            <article class="feature-card">
-              <h3>Requirements &amp; Pricing</h3>
-              <p>
-                Dynamic Airtable-driven checklists, FAQs, and 3-tier package comparison with
-                localized currency.
-              </p>
-            </article>
-            <article class="feature-card">
-              <h3>Application wizard</h3>
-              <p>
-                Embedded Tally/Softr form covering profile, eligibility, documents, packages,
-                consent, payment redirect, and success state.
-              </p>
-            </article>
-            <article class="feature-card">
-              <h3>Portals &amp; Admin</h3>
-              <p>
-                Client portal for application tracking and uploads; admin list/detail views with
-                status controls, notes, document checklist, and appointment fields.
-              </p>
-            </article>
-            <article class="feature-card">
-              <h3>Legal center</h3>
-              <p>Privacy, Terms, and KVKK consent pages plus compliance messaging.</p>
-            </article>
-            <article class="feature-card">
-              <h3>Thank-you &amp; messaging</h3>
-              <p>Post-payment confirmation, reminders, and optional in-portal messaging.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="forms" aria-label="Guided application">
-        <div class="container">
-          <header class="section-header">
-            <span class="pill">5–7 step journey</span>
-            <h2>Application wizard with validation and conditional logic</h2>
-            <p>
-              Built using Softr Forms or embedded Tally to keep maintenance simple while meeting
-              visa-specific branching requirements.
-            </p>
-          </header>
-          <ol class="process-steps">
-            <li>
-              <h3>Step 1 — Destination</h3>
-              <p>Region → Country → Visa type dropdowns synced to the Airtable Destinations table.</p>
-            </li>
-            <li>
-              <h3>Step 2 — Traveller profile</h3>
-              <p>Personal info, travel dates, purpose, and automatic passport expiry checks.</p>
-            </li>
-            <li>
-              <h3>Step 3 — Eligibility</h3>
-              <p>Dynamic yes/no and short-text questions loaded from per-slug templates.</p>
-            </li>
-            <li>
-              <h3>Step 4 — Documents</h3>
-              <p>Conditional uploads with type/size validation and per-document guidance.</p>
-            </li>
-            <li>
-              <h3>Step 5 — Package &amp; consent</h3>
-              <p>Package selection, KVKK/GDPR checkboxes, and terms acknowledgement.</p>
-            </li>
-            <li>
-              <h3>Step 6 — Payment</h3>
-              <p>Redirect to Shopier/Iyzico/Stripe; return webhooks store payment references.</p>
-            </li>
-            <li>
-              <h3>Step 7 — Success</h3>
-              <p>Thank-you state links to the client portal and onboarding checklist.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="section" id="data" aria-label="Airtable data model">
-        <div class="container">
-          <header class="section-header">
-            <span class="pill">Structured foundation</span>
-            <h2>Airtable schema for destinations, applications, and comms</h2>
-            <p>
-              Normalized tables keep configuration flexible while powering Softr filters,
-              automations, and analytics.
-            </p>
-          </header>
-          <div class="data-grid">
-            <article class="data-card">
-              <h3>Destinations</h3>
-              <ul>
-                <li>Region (Schengen / USA / UK / Canada / Asia)</li>
-                <li>Country, visa_type, slug</li>
-                <li>Requirements &amp; FAQs (rich text)</li>
-                <li>Linked doc_template_id</li>
-              </ul>
-            </article>
-            <article class="data-card">
-              <h3>Doc Templates</h3>
-              <ul>
-                <li>Name and document items (multi-select)</li>
-                <li>Conditional logic JSON</li>
-                <li>Example file links</li>
-              </ul>
-            </article>
-            <article class="data-card">
-              <h3>Applications</h3>
-              <ul>
-                <li>Traveller contact + package snapshot</li>
-                <li>Eligibility responses &amp; missing docs</li>
-                <li>Status workflow + payment fields</li>
-                <li>Appointment + submission metadata</li>
-              </ul>
-            </article>
-            <article class="data-card">
-              <h3>Users &amp; Roles</h3>
-              <ul>
-                <li>Clients and admins mapped to applications</li>
-                <li>Role-based Softr access filters</li>
-                <li>Optional metadata for support routing</li>
-              </ul>
-            </article>
-            <article class="data-card">
-              <h3>Email templates</h3>
-              <ul>
-                <li>Keys (welcome, needs_docs, ready_appointment, filed, completed)</li>
-                <li>Subject, body_html, variables</li>
-                <li>Versioning for localized copy</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="automations" aria-label="Automations">
-        <div class="container">
-          <header class="section-header">
-            <span class="pill">Make / Zapier scenarios</span>
-            <h2>Automated operations from submission to completion</h2>
-            <p>
-              Four core automation clusters keep the team informed, clients updated, and
-              payments reconciled without manual work.
-            </p>
-          </header>
-          <div class="content-grid">
-            <article class="detail-card">
-              <h3>Scenario A — New application</h3>
-              <ul>
-                <li>Trigger: Form submission (Tally/Softr)</li>
-                <li>Create Airtable application record</li>
-                <li>Send confirmation email + Slack/Email alert</li>
-                <li>Set initial status to <strong>New</strong></li>
-              </ul>
             </article>
             <article class="detail-card">
-              <h3>Scenario B — Status changes</h3>
-              <ul>
-                <li>Trigger: Status updated in Airtable</li>
-                <li>
-                  Conditional routing for Needs Docs, Ready for Appointment, Filed, Completed
-                  with tailored email copy
-                </li>
-                <li>Optional admin reminders for pending reviews</li>
-              </ul>
-            </article>
-            <article class="detail-card">
-              <h3>Scenario C — Reminders</h3>
-              <ul>
-                <li>Scheduled checks every 72 hours for stalled Needs Docs cases</li>
-                <li>Pre-appointment reminders 24 hours before scheduled time</li>
-                <li>Escalation channel for overdue responses</li>
-              </ul>
-            </article>
-            <article class="detail-card">
-              <h3>Scenario D — Payments</h3>
-              <ul>
-                <li>Webhook listener for Shopier/Iyzico/Stripe</li>
-                <li>Update payment_status and price snapshot</li>
-                <li>Dispatch receipt email and notify finance</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" aria-label="Roles and permissions">
-        <div class="container">
-          <header class="section-header">
-            <span class="pill">Access control</span>
-            <h2>Role-specific visibility across the Softr app</h2>
-            <p>Permissions ensure clients see only their cases while admins have full control.</p>
-          </header>
-          <div class="feature-grid roles-grid">
-            <article class="feature-card">
-              <h3>Public</h3>
-              <p>Marketing pages, selectors, pricing, requirements — read-only access.</p>
-            </article>
-            <article class="feature-card">
-              <h3>Client</h3>
+              <h3>Ölçeklenebilir no-code mimari</h3>
               <p>
-                Authenticated view filtered by email, document uploads, messages, and status
-                history.
+                Softr üyelik ve rol yönetimi, Tally/Softr formları ve Make/Zapier senaryoları
+                sayesinde teknik geliştirme olmadan genişletilebilirlik.
               </p>
             </article>
-            <article class="feature-card">
-              <h3>Admin / Coach</h3>
+            <article class="detail-card">
+              <h3>KVKK ve GDPR uyumu</h3>
               <p>
-                Full CRUD, status management, appointment logging, payment reconciliation, and
-                document oversight.
+                Açık rıza onayları, gizlilik/kvkk sayfaları, dosya erişim kısıtları ve haftalık
+                yedekleme rutini temel gereklilikleri kapsar.
               </p>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section class="section" aria-label="Statuses and comms">
-        <div class="container">
-          <header class="section-header">
-            <span class="pill">Lifecycle messaging</span>
-            <h2>Status stages with ready-to-edit email templates</h2>
-            <p>Each status automatically sends contextual guidance and next steps to clients.</p>
-          </header>
-          <div class="status-grid">
-            <article class="status-card">
-              <h3>New → Under Review</h3>
-              <p>Internal handoff; welcome email confirms receipt.</p>
-            </article>
-            <article class="status-card">
-              <h3>Needs Docs</h3>
-              <p>
-                Email: “We need a few documents to proceed” plus dynamic checklist and upload
-                link.
-              </p>
-            </article>
-            <article class="status-card">
-              <h3>Ready for Appointment</h3>
-              <p>
-                Email: “We’re ready to book your appointment” with instructions and booking
-                links.
-              </p>
-            </article>
-            <article class="status-card">
-              <h3>Filed</h3>
-              <p>
-                Email: “Your application has been filed” including submission reference and
-                timeline.
-              </p>
-            </article>
-            <article class="status-card">
-              <h3>Completed</h3>
-              <p>
-                Email: “All set! Your process is complete” with travel insurance upsell and next
-                steps.
-              </p>
-            </article>
-            <article class="status-card">
-              <h3>Rejected</h3>
-              <p>Optional path capturing embassy feedback and reapply guidance.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="pricing" aria-label="Pricing tiers">
-        <div class="container">
-          <header class="section-header">
-            <span class="pill">Packages</span>
-            <h2>Three service tiers with clear feature breakdown</h2>
-            <p>Localized currency defaults to ₺ with optional secondary currency display.</p>
-          </header>
-          <div class="pricing-grid">
-            <article class="pricing-card">
-              <div class="pricing-badge">Standard</div>
-              <h3>₺2,500</h3>
-              <ul>
-                <li>Eligibility screening + basic checklist</li>
-                <li>Two document reviews</li>
-                <li>Email support within 24 hours</li>
-              </ul>
-              <button class="btn btn-secondary">Connect to Shopier</button>
-            </article>
-            <article class="pricing-card pricing-card-featured">
-              <div class="pricing-badge">Premium</div>
-              <h3>₺5,000</h3>
-              <ul>
-                <li>Everything in Standard</li>
-                <li>Live chat support &amp; appointment prep</li>
-                <li>Up to five document iterations</li>
-              </ul>
-              <button class="btn">Connect to Iyzico</button>
-            </article>
-            <article class="pricing-card">
-              <div class="pricing-badge">VIP</div>
-              <h3>₺7,500</h3>
-              <ul>
-                <li>Priority turnaround &amp; concierge booking</li>
-                <li>Dedicated visa coach</li>
-                <li>Post-approval travel planning add-ons</li>
-              </ul>
-              <button class="btn btn-secondary">Connect to Stripe</button>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" aria-label="Analytics and compliance">
-        <div class="container">
-          <header class="section-header">
-            <span class="pill">Analytics &amp; security</span>
-            <h2>Measurement, SEO, and compliance baked in</h2>
-            <p>
-              GA4 and Meta Pixel instrumentation, sitemap generation, and privacy-first
-              controls maintain trust from day one.
-            </p>
-          </header>
-          <div class="content-grid two-column">
-            <article class="detail-card">
-              <h3>Analytics &amp; SEO</h3>
-              <ul>
-                <li>GA4 + Meta Pixel snippets with environment toggles</li>
-                <li>Meta titles/descriptions per page</li>
-                <li>Auto-generated sitemap &amp; speed budget (&lt;3s LCP)</li>
-              </ul>
-            </article>
-            <article class="detail-card">
-              <h3>Security &amp; compliance</h3>
-              <ul>
-                <li>KVKK/GDPR consent capture and legal pages</li>
-                <li>Private file storage with role-based gating</li>
-                <li>Rate limiting, weekly Airtable exports, and audit trail</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" aria-label="Acceptance criteria">
-        <div class="container">
-          <header class="section-header">
-            <span class="pill">Definition of done</span>
-            <h2>MVP acceptance checklist</h2>
-            <p>Each criterion is verifiable through demo flows or automated tests.</p>
-          </header>
-          <div class="acceptance-list">
-            <ul>
-              <li>Region → Country → Visa type drives requirements and the application wizard.</li>
-              <li>Form submission → Airtable record → confirmation email completes successfully.</li>
-              <li>Client portal reflects real-time status updates and document requests.</li>
-              <li>Admin status changes trigger matching email templates.</li>
-              <li>Payment link flow records package + payment status via webhook or manual callback.</li>
-              <li>Responsive design achieves sub-3s LCP across marketing pages.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="timeline" aria-label="Project timeline">
-        <div class="container">
-          <header class="section-header">
-            <span class="pill">Four-week plan</span>
-            <h2>Delivery milestones &amp; responsibilities</h2>
-            <p>Includes buffer for QA, soft launch, and knowledge transfer.</p>
-          </header>
-          <div class="timeline-grid">
-            <article class="timeline-card">
-              <h3>Week 1 — Foundations</h3>
-              <ul>
-                <li>Finalize Airtable schema and seed Destinations</li>
-                <li>Build marketing pages + selector experience</li>
-                <li>Configure initial wizard steps &amp; validations</li>
-              </ul>
-            </article>
-            <article class="timeline-card">
-              <h3>Week 2 — Portals &amp; automations</h3>
-              <ul>
-                <li>Launch client portal &amp; admin panel</li>
-                <li>Implement Automations A &amp; B</li>
-                <li>Draft email templates for review</li>
-              </ul>
-            </article>
-            <article class="timeline-card">
-              <h3>Week 3 — Payments &amp; compliance</h3>
-              <ul>
-                <li>Integrate payment providers &amp; webhook handling</li>
-                <li>Set up analytics, legal pages, and backups</li>
-                <li>Run QA on end-to-end journeys</li>
-              </ul>
-            </article>
-            <article class="timeline-card">
-              <h3>Week 4 — Buffer &amp; launch</h3>
-              <ul>
-                <li>Address feedback, polish UX, finalize copy</li>
-                <li>Record Loom walkthrough + admin handbook</li>
-                <li>Prepare for soft launch &amp; support transition</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" aria-label="Softr team collaboration">
-        <div class="container">
-          <header class="section-header">
-            <span class="pill">Collaboration</span>
-            <h2>What we deliver &amp; what we need from your team</h2>
-            <p>
-              Transparent responsibilities keep build momentum high and ensure final assets are
-              launch-ready.
-            </p>
-          </header>
-          <div class="content-grid two-column">
-            <article class="detail-card">
-              <h3>Included in delivery</h3>
-              <ul>
-                <li>Softr build (pages, auth, portal, admin)</li>
-                <li>Airtable schema, linked records, base documentation</li>
-                <li>Multi-step forms with conditional logic</li>
-                <li>Make scenarios (A–D) with testing notes</li>
-                <li>Payment integration flow diagrams &amp; QA</li>
-                <li>Handover: Loom walkthrough + admin handbook</li>
-              </ul>
-            </article>
-            <article class="detail-card">
-              <h3>Assets needed from Softr team</h3>
-              <ul>
-                <li>Brand assets (logo, palette, typography)</li>
-                <li>Legal copy, email copy, and localization decisions</li>
-                <li>Domain/DNS access + payment provider credentials</li>
-                <li>Analytics IDs (GA4, Meta Pixel)</li>
-                <li>Operations contacts for approvals &amp; support</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" aria-label="Quotes and support options">
-        <div class="container">
-          <header class="section-header">
-            <span class="pill">Investment</span>
-            <h2>Fixed-price quotes &amp; post-launch support</h2>
-            <p>All quotes include 30 days of warranty bug fixes after go-live.</p>
-          </header>
-          <div class="pricing-grid quote-grid">
-            <article class="pricing-card">
-              <div class="pricing-badge">Core MVP</div>
-              <h3>₺185,000</h3>
-              <ul>
-                <li>Includes sections 1–11</li>
-                <li>Four-week build + buffer</li>
-                <li>Dedicated PM &amp; weekly syncs</li>
-              </ul>
-              <p class="quote-footnote">Optional support: ₺18,500 / month retainer.</p>
-            </article>
-            <article class="pricing-card">
-              <div class="pricing-badge">MVP + Enhancements</div>
-              <h3>₺215,000</h3>
-              <ul>
-                <li>Adds multilingual (TR/EN) toggle</li>
-                <li>Includes Calendly/Cal.com appointment picker</li>
-                <li>Extended QA for locale-specific flows</li>
-              </ul>
-              <p class="quote-footnote">Optional support: ₺22,000 / month retainer.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="cta" id="contact" aria-label="Next steps">
-        <div class="container">
-          <div class="cta-content">
-            <h2>Ready to move forward?</h2>
-            <p>
-              Share brand assets, confirm payment providers, and we’ll schedule a kickoff to
-              start Week 1 foundations.
-            </p>
-            <div class="contact-details">
-              <p>Email: <a href="mailto:build@globetrot.com">build@globetrot.com</a></p>
-              <p>WhatsApp: <a href="https://wa.me/905551112233">+90 555 111 2233</a></p>
-            </div>
-          </div>
-          <form class="cta-form" aria-label="Request a proposal PDF">
-            <label class="sr-only" for="email">Work email</label>
-            <input type="email" id="email" name="email" placeholder="you@company.com" />
-            <button type="submit" class="btn">Send me the deck</button>
-          </form>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-brand">
-          <div class="logo">Globetrot</div>
-          <p>No-code visa operations built with Softr, Airtable, and automation best practices.</p>
+    <footer class="site-footer" aria-label="Alt bilgi">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo">https://visataly.com</div>
+          <p>
+            No-code vize işletme platformu. Softr, Airtable ve Make ile uçtan uca çözümler
+            sunuyoruz.
+          </p>
         </div>
-        <div class="footer-links">
-          <div>
-            <h4>Company</h4>
-            <a href="#">About</a>
-            <a href="#">Case studies</a>
-            <a href="#">Careers</a>
-          </div>
-          <div>
-            <h4>Resources</h4>
-            <a href="#">Blog</a>
-            <a href="#">Documentation</a>
-            <a href="#">Status</a>
-          </div>
-          <div>
-            <h4>Legal</h4>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Security</a>
-          </div>
+        <div>
+          <h4>Keşfet</h4>
+          <ul>
+            <li><a href="akislar.html">Kullanıcı akışları</a></li>
+            <li><a href="sayfalar.html">Softr sayfaları</a></li>
+            <li><a href="secici.html">Destinasyon seçici</a></li>
+            <li><a href="fiyatlandirma.html">Paketler</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>İletişim</h4>
+          <ul>
+            <li><a href="mailto:hello@visataly.com">hello@visataly.com</a></li>
+            <li><a href="tel:+902122222222">+90 212 222 22 22</a></li>
+            <li><a href="https://visataly.com" target="_blank" rel="noopener">Website</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-bottom">© 2024 Globetrot Collective. All rights reserved.</div>
+      <div class="footer-meta">© 2024 https://visataly.com. Tüm hakları saklıdır.</div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

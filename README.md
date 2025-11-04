@@ -1,18 +1,31 @@
-# Globetrot — Visa Platform Proposal
+# VisaTaly — No-Code Vize Platformu Teklifi
 
-This repository hosts a static proposal site outlining the Globetrot no-code visa platform. The page presents the full MVP scope across Softr pages, Airtable schema, automation scenarios, compliance considerations, delivery timeline, and fixed-price quotes.
+Bu depo, VisaTaly için hazırlanan çok sayfalı no-code vize platformu teklifini barındırır. İçerik Softr + Airtable mimarisini,
+kamu/müşteri/admin akışlarını, veri modelini, otomasyon senaryolarını, fiyat tekliflerini ve teslim takvimini Türkçe olarak
+açıklar.
 
-## Preview
+## Önizleme
 
-Open `index.html` in your browser to explore the interactive document. Region, country, and visa type selectors demonstrate the guided experience travellers will see inside the Softr build.
+`index.html` dosyasını bir tarayıcıda açarak ana sayfayı inceleyebilirsiniz. Üst menüden aşağıdaki sayfalar arasında
+geçiş yapılır:
 
-## Highlights
+- `akislar.html` – Kamu ve admin akışları, durum yaşam döngüsü
+- `sayfalar.html` – Softr sayfaları ve rol bazlı yetkilendirme
+- `veri-modeli.html` – Airtable tabloları ve veri yönetişimi
+- `otomasyonlar.html` – Form adımları ve Make/Zapier senaryoları
+- `fiyatlandirma.html` – Paketler ve proje teklifleri
+- `zaman-cizelgesi.html` – Sprint planı, kabul kriterleri ve gereken girdiler
+- `secici.html` – Bölge → ülke → vize türü seçici ve örnek gereksinim listesi
+- `iletisim.html` – Keşif görüşmesi formu ve iletişim bilgileri
 
-- User and admin journeys mapped end-to-end, including portals and email touchpoints.
-- Airtable data model, dynamic forms, Make/Zapier scenarios, and payment flows documented.
-- Pricing tiers, analytics & security checklist, acceptance criteria, and four-week timeline.
-- Fixed-price quotes for the core MVP and the multilingual + appointment picker add-ons.
+## Öne çıkanlar
 
-## Customization
+- Tüm içerik ve arayüz metinleri Türkçeleştirildi; marka adı `https://visataly.com` olarak güncellendi.
+- Tek sayfa yerine çok sayfalı navigasyon yapısı kuruldu, her sayfa kendine ait URL üzerinden açılıyor.
+- Bölge/ülke/vize seçicisi güncellenerek Türkçe veri seti ve dinamik gereksinim listesi gösteriliyor.
+- Başvuru akışları, veri modeli, otomasyonlar, fiyatlandırma ve zaman çizelgesi ayrı sayfalarda detaylandırıldı.
 
-Update copy, pricing, or automation details directly within `index.html`. Styling rules live in `styles.css`, and lightweight JavaScript helpers power the navigation and visa selector inside `script.js`.
+## Özelleştirme
+
+Metinleri, fiyatları veya otomasyon detaylarını ilgili HTML dosyalarında düzenleyebilirsiniz. Genel stil kuralları
+`styles.css` dosyasında, mobil menü ve vize seçici gibi etkileşimler `script.js` içinde yer alır.

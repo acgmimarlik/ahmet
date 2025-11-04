@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zaman Çizelgesi – VisaTaly</title>
+    <meta
+      name="description"
+      content="VisaTaly vize platformu için proje zaman çizelgesini, kabul kriterlerini ve teslimat planını inceleyin."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="logo"><a href="index.html">https://visataly.com</a></div>
+        <nav class="main-nav" aria-label="Ana menü">
+          <a href="index.html">Anasayfa</a>
+          <a href="akislar.html">Akışlar</a>
+          <a href="sayfalar.html">Sayfalar</a>
+          <a href="veri-modeli.html">Veri Modeli</a>
+          <a href="otomasyonlar.html">Otomasyonlar</a>
+          <a href="fiyatlandirma.html">Fiyatlandırma</a>
+          <a href="zaman-cizelgesi.html" aria-current="page">Zaman Çizelgesi</a>
+          <a href="iletisim.html">İletişim</a>
+        </nav>
+        <div class="header-actions">
+          <button class="btn btn-secondary">PDF İndir</button>
+          <button class="btn">Keşif Görüşmesi Planla</button>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Gezinmeyi aç</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobil menü"></nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <header class="section-header">
+            <span class="pill">Proje takvimi</span>
+            <h1>3 haftalık sprint + 1 hafta lansman desteği</h1>
+            <p>
+              Aşağıdaki plan kaynak ve teslim kapsamına göre uyarlanabilir; hedefimiz 3 haftada
+              MVP’yi canlıya almak ve 4. haftayı tampon olarak tutmak.
+            </p>
+          </header>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-label">1. Hafta</span>
+              <p>Veri tasarımı, form yapılandırması, destinasyon içerikleri ve temel sayfalar.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label">2. Hafta</span>
+              <p>Müşteri portalı, yönetici paneli, otomasyon senaryoları ve e-posta şablonları.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label">3. Hafta</span>
+              <p>Ödeme akışları, analitik kurulumu, yasal sayfalar, QA ve devretme.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label">4. Hafta</span>
+              <p>Hata giderme, içerik güncellemeleri ve yumuşak lansman.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section-header">
+            <span class="pill">Kabul kriterleri</span>
+            <h2>MVP’nin tamamlanma koşulları</h2>
+            <p>
+              Lansman onayı aşağıdaki kriterlerin karşılanması ile verilir; her madde QA listesine
+              işlenir.
+            </p>
+          </header>
+          <div class="content-grid two-column">
+            <article class="detail-card">
+              <ul>
+                <li>Bölge → ülke → tür seçimi gereksinimleri ve formu tetikler.</li>
+                <li>Form gönderimi → Airtable kaydı → karşılama e-postası zinciri çalışır.</li>
+                <li>Müşteri portalı sadece ilgili kullanıcının kayıtlarını gösterir.</li>
+                <li>Admin durum güncellemesi doğru e-postayı tetikler.</li>
+              </ul>
+            </article>
+            <article class="detail-card">
+              <ul>
+                <li>Ödeme bağlantısı dönüşü ödeme durumunu günceller.</li>
+                <li>Pazarlama sayfaları mobil uyumlu ve LCP &lt; 3 saniye.</li>
+                <li>KVKK/GDPR onayları kayıt altına alınır.</li>
+                <li>Dosya erişimleri rol bazlı sınırlanır.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section-header">
+            <span class="pill">Gereken girdiler</span>
+            <h2>VisaTaly ekibiyle paylaşmanız gerekenler</h2>
+            <p>
+              Proje başlangıcında marka kimliği, metinler ve entegrasyon erişimlerini paylaşmanız
+              işleri hızlandırır.
+            </p>
+          </header>
+          <div class="content-grid two-column">
+            <article class="detail-card">
+              <h3>Operasyonel</h3>
+              <ul>
+                <li>Logo, renk paleti, tipografi tercihleri</li>
+                <li>Hedef ülkeler ve vize türleri için içerikler</li>
+                <li>Yasal metinler (gizlilik, KVKK, kullanım şartları)</li>
+                <li>Ödeme sağlayıcı erişimi (Shopier/Iyzico/Stripe)</li>
+              </ul>
+            </article>
+            <article class="detail-card">
+              <h3>İletişim &amp; destek</h3>
+              <ul>
+                <li>E-posta şablon metinleri ve marka tonu</li>
+                <li>Analitik hesap bilgileri (GA4, Meta Pixel)</li>
+                <li>Operasyon ekibi için iletişim kişileri</li>
+                <li>Lansman sonrası destek tercihi (saatlik / retainer)</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Alt bilgi">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo">https://visataly.com</div>
+          <p>Zaman çizelgesi ve teslimat sorularınız için bize ulaşın.</p>
+        </div>
+        <div>
+          <h4>Bağlantılar</h4>
+          <ul>
+            <li><a href="fiyatlandirma.html">Paketler</a></li>
+            <li><a href="otomasyonlar.html">Otomasyon planı</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>İletişim</h4>
+          <ul>
+            <li><a href="mailto:hello@visataly.com">hello@visataly.com</a></li>
+            <li><a href="tel:+902122222222">+90 212 222 22 22</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-meta">© 2024 https://visataly.com.</div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

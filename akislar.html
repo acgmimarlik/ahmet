@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Akışlar – VisaTaly</title>
+    <meta
+      name="description"
+      content="VisaTaly no-code vize platformu için halka açık ve yönetici akışları adım adım inceleyin."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="logo"><a href="index.html">https://visataly.com</a></div>
+        <nav class="main-nav" aria-label="Ana menü">
+          <a href="index.html">Anasayfa</a>
+          <a href="akislar.html" aria-current="page">Akışlar</a>
+          <a href="sayfalar.html">Sayfalar</a>
+          <a href="veri-modeli.html">Veri Modeli</a>
+          <a href="otomasyonlar.html">Otomasyonlar</a>
+          <a href="fiyatlandirma.html">Fiyatlandırma</a>
+          <a href="zaman-cizelgesi.html">Zaman Çizelgesi</a>
+          <a href="iletisim.html">İletişim</a>
+        </nav>
+        <div class="header-actions">
+          <button class="btn btn-secondary">PDF İndir</button>
+          <button class="btn">Keşif Görüşmesi Planla</button>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Gezinmeyi aç</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobil menü"></nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <header class="section-header">
+            <span class="pill">Yönlendirilmiş deneyimler</span>
+            <h1>Kamu ve operasyon akışları uçtan uca planlandı</h1>
+            <p>
+              Adaylar destinasyon seçip belgelerini yüklerken, ekipler durum yönetimi ve
+              iletişimi tek panelden yürütür. Aşağıdaki adımlar MVP teslimine dahildir.
+            </p>
+          </header>
+          <div class="content-grid two-column">
+            <article class="detail-card">
+              <h2>1.1 Kamu akışı</h2>
+              <ol>
+                <li>Bölge → Ülke → Vize türü seçici yerelleştirilmiş gereksinimleri açar.</li>
+                <li>
+                  Gereksinimler görünümü belge kontrol listesi, SSS ve paket (₺2.500 / ₺5.000 /
+                  ₺7.500) karşılaştırması sunar.
+                </li>
+                <li>
+                  E-posta sihirli bağlantısı veya şifre ile hesap oluşturma, 5–7 adımlı
+                  sihirbazı açar.
+                </li>
+                <li>
+                  Sihirbaz profil, destinasyon bazlı uygunluk soruları, koşullu belge
+                  yüklemeleri, KVKK/GDPR onayı ve final kontrolünü kapsar.
+                </li>
+                <li>
+                  Shopier/Iyzico (veya Stripe test) ödeme yönlendirmesi teşekkür sayfasına
+                  döner ve müşteri portalını aktive eder.
+                </li>
+                <li>
+                  Müşteri portalı canlı durumlar, mesaj/notlar ve güvenli dosya indirmeleri
+                  gösterir.
+                </li>
+              </ol>
+            </article>
+            <article class="detail-card">
+              <h2>1.2 Admin/Koç akışı</h2>
+              <ol>
+                <li>Yeni başvuru tüm form verileriyle Airtable kaydı oluşturur.</li>
+                <li>
+                  Admin uygunluğu inceler, durumu günceller, eksik belgeleri ve iç notları
+                  kaydeder.
+                </li>
+                <li>Durum geçişleri müşteriye uygun markalı e-postayı tetikler.</li>
+                <li>
+                  Randevu detayları, ödeme teyitleri ve başvuru referansları aynı kayıtta
+                  tutulur.
+                </li>
+                <li>
+                  Tamamlama ile dosya arşivlenir ancak raporlama için erişilebilir kalır.
+                </li>
+              </ol>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section-header">
+            <span class="pill">Durum yaşam döngüsü</span>
+            <h2>Portal adımları ve otomatik bildirimler</h2>
+            <p>
+              Her durum değişimi hem portalda hem de e-posta üzerinden iletişim kurularak
+              başvuranların her zaman haberdar olması sağlanır.
+            </p>
+          </header>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-label">Yeni</span>
+              <p>Başvuru geldi, karşılama e-postası ve ekip bildirimi tetiklenir.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label">İncelemede</span>
+              <p>Operasyon ekibi uygunluk cevaplarını ve belgeleri değerlendirir.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label">Eksik Belgeler</span>
+              <p>Kontrol listesi ve yükleme bağlantılı e-posta otomatik gönderilir.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label">Randevuya Hazır</span>
+              <p>Koçlar dış randevu bağlantıları ve yönergeleri paylaşır.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label">Dosyalandı</span>
+              <p>Başvuru referansı, tarih ve teslim detayı kaydedilip iletilir.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-label">Tamamlandı</span>
+              <p>Son teşekkür e-postası ve ek ürün/seyahat sigortası önerileri sunulur.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Alt bilgi">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo">https://visataly.com</div>
+          <p>No-code vize işletme platformu.</p>
+        </div>
+        <div>
+          <h4>Keşfet</h4>
+          <ul>
+            <li><a href="sayfalar.html">Softr sayfaları</a></li>
+            <li><a href="veri-modeli.html">Airtable şeması</a></li>
+            <li><a href="otomasyonlar.html">Make senaryoları</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>İletişim</h4>
+          <ul>
+            <li><a href="mailto:hello@visataly.com">hello@visataly.com</a></li>
+            <li><a href="tel:+902122222222">+90 212 222 22 22</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-meta">© 2024 https://visataly.com.</div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

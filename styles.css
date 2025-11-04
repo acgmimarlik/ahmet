@@ -79,6 +79,28 @@ img {
   color: var(--accent);
 }
 
+.btn-link {
+  background: transparent;
+  box-shadow: none;
+  color: var(--muted);
+  padding: 0.8rem 0;
+  text-decoration: underline;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  color: var(--accent);
+  transform: none;
+  box-shadow: none;
+}
+
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -457,6 +479,35 @@ img {
   margin-top: 0.6rem;
 }
 
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.timeline-item {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 18px;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.timeline-label {
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .data-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -602,6 +653,49 @@ img {
   margin-top: 1.5rem;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.contact-grid .cta-form {
+  flex-direction: column;
+}
+
+.contact-grid label {
+  font-weight: 500;
+}
+
+.contact-grid input,
+.contact-grid textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.6);
+  color: var(--text);
+  padding: 0.75rem 1rem;
+  font: inherit;
+}
+
+.contact-grid textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.form-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 .roles-grid .feature-card {
   min-height: 180px;
 }
@@ -652,6 +746,38 @@ img {
   flex-wrap: wrap;
   gap: 2.5rem;
   justify-content: space-between;
+}
+
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.2rem;
+  align-items: flex-start;
+}
+
+.footer-grid h4 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.footer-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.footer-grid a {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.footer-meta {
+  margin-top: 2.5rem;
+  text-align: center;
+  color: rgba(148, 163, 184, 0.65);
+  font-size: 0.85rem;
 }
 
 .footer-links {
