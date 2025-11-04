@@ -1,0 +1,11 @@
+{
+  "name": "@vizatly/scripts",
+  "private": true,
+  "version": "0.1.0",
+  "dependencies": {
+    "tsx": "4.7.1"
+  },
+  "scripts": {
+    "seed": "tsx ../prisma/seed.ts"
+  }
+}
