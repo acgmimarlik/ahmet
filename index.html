@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atlys-Inspired Visa Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="logo">Globetrot</div>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="#features">Features</a>
+          <a href="#process">How it works</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="header-actions">
+          <button class="btn btn-secondary">Sign in</button>
+          <button class="btn">Get started</button>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile"></nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-copy">
+            <span class="pill">Visa planning, simplified</span>
+            <h1>Say hello to stress-free travel visas</h1>
+            <p>
+              Globetrot guides you through every visa requirement with step-by-step
+              checklists, automated document prep, and expert support that feels like a
+              personal concierge.
+            </p>
+            <form class="hero-form" aria-label="Get visa guidance">
+              <label class="sr-only" for="destination">Choose a destination</label>
+              <select id="destination" name="destination">
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Schengen Area</option>
+                <option>Singapore</option>
+                <option>Australia</option>
+              </select>
+              <button type="submit" class="btn">Check my visa options</button>
+            </form>
+            <div class="trust-badges" aria-label="Trust badges">
+              <img src="https://dummyimage.com/90x28/fff/1f2230&text=WSJ" alt="Wall Street Journal" />
+              <img src="https://dummyimage.com/90x28/fff/1f2230&text=Forbes" alt="Forbes" />
+              <img src="https://dummyimage.com/90x28/fff/1f2230&text=TC" alt="TechCrunch" />
+            </div>
+          </div>
+          <div class="hero-card" aria-labelledby="card-title">
+            <div class="card-head">
+              <div class="card-badge">Ready in 3 minutes</div>
+              <div class="card-title" id="card-title">Visa checklist preview</div>
+            </div>
+            <ul class="card-list">
+              <li>
+                <span class="icon success" aria-hidden="true">✓</span>
+                Confirm travel itinerary
+              </li>
+              <li>
+                <span class="icon success" aria-hidden="true">✓</span>
+                Digitize passport &amp; photo
+              </li>
+              <li>
+                <span class="icon pending" aria-hidden="true">•</span>
+                Upload financial proof
+              </li>
+              <li>
+                <span class="icon pending" aria-hidden="true">•</span>
+                Schedule embassy appointment
+              </li>
+            </ul>
+            <div class="card-footer">
+              <button class="btn btn-secondary">Preview application</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Platform impact">
+        <div class="container">
+          <div class="metric">
+            <div class="metric-value">96%</div>
+            <div class="metric-label">approval rate</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">25k+</div>
+            <div class="metric-label">travellers served</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">190+</div>
+            <div class="metric-label">destinations covered</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">24/7</div>
+            <div class="metric-label">expert chat support</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="container">
+          <header class="section-header">
+            <span class="pill">Why travellers choose Globetrot</span>
+            <h2>Everything you need to secure your visa quickly</h2>
+            <p>
+              From custom document checklists to appointment reminders, Globetrot mirrors the
+              Atlys experience with a polished and approachable interface.
+            </p>
+          </header>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>Personalized document guidance</h3>
+              <p>
+                Upload your details once and instantly receive a checklist that adapts to the
+                latest embassy rules and your specific travel plans.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Smart form autofill</h3>
+              <p>
+                Glide through government forms with automatically populated answers, validated
+                against the most common rejection triggers.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Secure document vault</h3>
+              <p>
+                Store passport scans, photos, and itineraries in an encrypted workspace ready
+                for instant reuse on your next trip.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Embassy appointment concierge</h3>
+              <p>
+                Let Globetrot monitor open slots, prep interview scripts, and remind you of
+                every supporting document to bring.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="process" id="process" aria-label="How it works">
+        <div class="container">
+          <header class="section-header">
+            <span class="pill">3 simple steps</span>
+            <h2>Your visa in days, not weeks</h2>
+          </header>
+          <ol class="process-steps">
+            <li>
+              <h3>Create your profile</h3>
+              <p>Tell us where you're headed and when you plan to travel.</p>
+            </li>
+            <li>
+              <h3>Complete tailored tasks</h3>
+              <p>Follow the prioritized checklist and upload documents from any device.</p>
+            </li>
+            <li>
+              <h3>Submit with confidence</h3>
+              <p>We verify your application and hand-deliver it to the embassy queue.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="destinations" id="destinations" aria-label="Popular destinations">
+        <div class="container">
+          <header class="section-header">
+            <span class="pill">Top destinations</span>
+            <h2>Expertise for the world's busiest embassies</h2>
+          </header>
+          <div class="destination-grid">
+            <article>
+              <h3>United States</h3>
+              <p>Fast-track B1/B2, F1, and H1B visas with DS-160 coaching.</p>
+            </article>
+            <article>
+              <h3>Schengen Area</h3>
+              <p>Coordinate supporting paperwork for multi-country itineraries.</p>
+            </article>
+            <article>
+              <h3>United Kingdom</h3>
+              <p>Navigate sponsor letters and biometrics with ease.</p>
+            </article>
+            <article>
+              <h3>Canada</h3>
+              <p>Confidently apply for visitor, study, and work permits.</p>
+            </article>
+            <article>
+              <h3>Singapore</h3>
+              <p>Get personalized Entry Visa strategies for business travellers.</p>
+            </article>
+            <article>
+              <h3>Australia</h3>
+              <p>Stay compliant with health and character requirements.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" aria-label="Testimonials">
+        <div class="container">
+          <header class="section-header">
+            <span class="pill">Loved by travellers worldwide</span>
+            <h2>Real stories from people who hate paperwork</h2>
+          </header>
+          <div class="testimonial-grid">
+            <figure>
+              <blockquote>
+                “Globetrot was like having a visa expert on speed dial. The entire DS-160
+                took minutes instead of hours.”
+              </blockquote>
+              <figcaption>— Sofia M., Product Manager</figcaption>
+            </figure>
+            <figure>
+              <blockquote>
+                “I finished my Schengen paperwork on the train. Reminders kept me on track
+                even when I was offline.”
+              </blockquote>
+              <figcaption>— Anish K., Photographer</figcaption>
+            </figure>
+            <figure>
+              <blockquote>
+                “The appointment concierge nabbed a cancellation slot and saved my
+                honeymoon.”
+              </blockquote>
+              <figcaption>— Priya &amp; Arjun, Newlyweds</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" id="faq" aria-label="Frequently asked questions">
+        <div class="container">
+          <header class="section-header">
+            <span class="pill">FAQ</span>
+            <h2>Answers before you even ask</h2>
+          </header>
+          <div class="faq-list">
+            <details open>
+              <summary>Is Globetrot available in my country?</summary>
+              <p>
+                Yes! We currently support applicants residing in 55 countries and are adding
+                more every month.
+              </p>
+            </details>
+            <details>
+              <summary>How long does the visa process take?</summary>
+              <p>
+                Most applications are ready to submit in under five days thanks to automated
+                document prep and expert review.
+              </p>
+            </details>
+            <details>
+              <summary>What happens to my documents?</summary>
+              <p>
+                Your uploads are stored with bank-grade encryption and can be deleted with a
+                single click after your trip.
+              </p>
+            </details>
+            <details>
+              <summary>Do you provide embassy interview support?</summary>
+              <p>
+                Absolutely. Receive tailored interview prep, sample questions, and real-time
+                chat coaching from former visa officers.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" aria-label="Call to action">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Ready to travel smarter?</h2>
+            <p>Join thousands of travellers who trust Globetrot for a smoother visa journey.</p>
+          </div>
+          <form class="cta-form" aria-label="Join the waitlist">
+            <label class="sr-only" for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" />
+            <button type="submit" class="btn">Join the waitlist</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-brand">
+          <div class="logo">Globetrot</div>
+          <p>Inspired by Atlys. Built for travellers who value time, clarity, and control.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h4>Company</h4>
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Press</a>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <a href="#">Help center</a>
+            <a href="#">Contact</a>
+            <a href="#">Live chat</a>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Security</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2024 Globetrot Inc. All rights reserved.</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
