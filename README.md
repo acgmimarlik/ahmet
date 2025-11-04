@@ -1,17 +1,18 @@
-# Globetrot — Atlys Inspired Landing Page
+# Globetrot — Visa Platform Proposal
 
-This repository contains a static marketing page inspired by the look and flow of the Atlys visa assistant. It highlights a concierge-style onboarding flow, feature breakdown, testimonials, and responsive design tuned for modern travel-tech brands.
+This repository hosts a static proposal site outlining the Globetrot no-code visa platform. The page presents the full MVP scope across Softr pages, Airtable schema, automation scenarios, compliance considerations, delivery timeline, and fixed-price quotes.
 
-## Getting started
+## Preview
 
-Open `index.html` in your browser to view the landing page locally. All styling and behavior lives in the adjacent `styles.css` and `script.js` files—no build tools or dependencies required.
+Open `index.html` in your browser to explore the interactive document. Region, country, and visa type selectors demonstrate the guided experience travellers will see inside the Softr build.
 
-## Features
+## Highlights
 
-- Sticky navigation with mobile-friendly toggle
-- Rich hero section featuring a visa checklist preview card
-- Feature highlights, process steps, destination grid, testimonials, FAQ, and CTA banner
-- Responsive layout with modern gradients and elevated cards
-- Lightweight JavaScript for mobile nav, mock form submissions, and waitlist interactions
+- User and admin journeys mapped end-to-end, including portals and email touchpoints.
+- Airtable data model, dynamic forms, Make/Zapier scenarios, and payment flows documented.
+- Pricing tiers, analytics & security checklist, acceptance criteria, and four-week timeline.
+- Fixed-price quotes for the core MVP and the multilingual + appointment picker add-ons.
 
-Feel free to customize the copy, imagery, and styling to match your brand.
+## Customization
+
+Update copy, pricing, or automation details directly within `index.html`. Styling rules live in `styles.css`, and lightweight JavaScript helpers power the navigation and visa selector inside `script.js`.
